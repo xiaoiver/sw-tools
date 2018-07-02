@@ -46,7 +46,7 @@ module.exports = {
             navigateFallback: PUBLIC_PATH + 'index.html',
             staticFileGlobsIgnorePatterns: [/\.map$/, /\.png$/],
             runtimeCaching: [{
-                urlPattern: '/.*\.png$',
+                urlPattern: /\.png$/,
                 handler: 'networkFirst'
             }]
         })

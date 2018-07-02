@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf examples/sw-precache/dist/ examples/sw-toolbox/dist/",
     "build": "npm run clean && npm run build:sw-precache && npm run build:sw-toolbox",
     "build:sw-precache": "webpack --config examples/sw-precache/webpack.config.js",
