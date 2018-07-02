@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Service Worker 预缓存 - 使用 sw-precache 实现
+        </title>
+    <link href="/sw-tools/examples/sw-precache/dist/index.css" rel="stylesheet"></head>
+    <body>
+        <p>这是一张迷雾效果图</p>
+        <img src="./fog.png">
+        <script>
+            window.onload = function () {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/sw-tools/examples/sw-precache/dist/service-worker.js', {
+                        scope: '/sw-tools/examples/sw-precache/dist/'
+                    });
+                }
+            };
+        </script>
+    <script type="text/javascript" src="/sw-tools/examples/sw-precache/dist/index.5bbfecfc.js"></script></body>
+</html>

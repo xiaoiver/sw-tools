@@ -1,9 +1,8 @@
 <html>
     <head>
         <title>
-            Service Worker 预缓存
+            Service Worker 预缓存 - 使用 sw-precache 实现
         </title>
-        <link rel="stylesheet" type="text/css" href="./index.css" />
     </head>
     <body>
         <p>这是一张迷雾效果图</p>
@@ -11,8 +10,8 @@
         <script>
             window.onload = function () {
                 if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('/sw-tools/examples/init/service-worker.js', {
-                        scope: '/sw-tools/examples/init/'
+                    navigator.serviceWorker.register('<%= webpackConfig.output.publicPath %>service-worker.js', {
+                        scope: '<%= webpackConfig.output.publicPath %>'
                     });
                 }
             };

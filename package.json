@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf examples/sw-precache/dist/",
+    "build": "npm run build:sw-precache",
+    "build:sw-precache": "npm run clean && webpack --config examples/sw-precache/webpack.config.js"
   },
   "author": "xiaop",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.21.0",
     "sw-precache-webpack-plugin": "^0.11.5",
+    "url-loader": "^1.0.1",
     "webpack": "^3.12.0"
   }
 }
