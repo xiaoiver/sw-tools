@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Service Worker 动态缓存 - 使用 sw-toolbox 实现
+        </title>
+    </head>
+    <body>
+        <p>这是一张迷雾效果图</p>
+        <img src="./fog.png">
+        <script>
+            window.onload = function () {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('<%= webpackConfig.output.publicPath %>service-worker.js', {
+                        scope: '<%= webpackConfig.output.publicPath %>'
+                    });
+                }
+            };
+        </script>
+    </body>
+</html>

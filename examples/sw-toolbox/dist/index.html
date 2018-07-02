@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Service Worker 动态缓存 - 使用 sw-toolbox 实现
+        </title>
+    <link href="/sw-tools/examples/sw-toolbox/dist/index.css" rel="stylesheet"></head>
+    <body>
+        <p>这是一张迷雾效果图</p>
+        <img src="./fog.png">
+        <script>
+            window.onload = function () {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/sw-tools/examples/sw-toolbox/dist/service-worker.js', {
+                        scope: '/sw-tools/examples/sw-toolbox/dist/'
+                    });
+                }
+            };
+        </script>
+    <script type="text/javascript" src="/sw-tools/examples/sw-toolbox/dist/index.14d7138f.js"></script></body>
+</html>
