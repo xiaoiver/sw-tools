@@ -1,0 +1,15 @@
+{
+  "name": "sw-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xiaop",
+  "license": "ISC",
+  "devDependencies": {
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "webpack": "^3.12.0"
+  }
+}

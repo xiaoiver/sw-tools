@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            Service Worker 预缓存
+        </title>
+        <link rel="stylesheet" type="text/css" href="./index.css" />
+    </head>
+    <body>
+        <p>这是一张迷雾效果图</p>
+        <img src="./fog.png">
+        <script>
+            window.onload = function () {
+                navigator.serviceWorker.register('/sw-tools/examples/init/service-worker.js', {
+                    scope: '/sw-tools/examples/init/'
+                });
+            };
+        </script>
+    </body>
+</html>
