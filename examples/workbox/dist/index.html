@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Service Worker 开发 - 使用 workbox 实现
+        </title>
+    <link href="/sw-tools/examples/workbox/dist/index.css" rel="stylesheet"></head>
+    <body>
+        <p>这是一张迷雾效果图</p>
+        <img src="./fog.png">
+        <script>
+            window.onload = function () {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/sw-tools/examples/workbox/dist/service-worker.js', {
+                        scope: '/sw-tools/examples/workbox/dist/'
+                    });
+                }
+            };
+        </script>
+    <script type="text/javascript" src="/sw-tools/examples/workbox/dist/index.04ef0e20.js"></script></body>
+</html>

@@ -1,13 +1,14 @@
 {
   "name": "sw-tools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "<<PWA 课程 - Service Worker 开发工具>> 示例项目",
+  "private": true,
   "scripts": {
     "clean": "rimraf examples/sw-precache/dist/ examples/sw-toolbox/dist/",
-    "build": "npm run clean && npm run build:sw-precache && npm run build:sw-toolbox",
+    "build": "npm run clean && npm run build:sw-precache && npm run build:sw-toolbox && npm run build:workbox",
     "build:sw-precache": "webpack --config examples/sw-precache/webpack.config.js",
-    "build:sw-toolbox": "webpack --config examples/sw-toolbox/webpack.config.js"
+    "build:sw-toolbox": "webpack --config examples/sw-toolbox/webpack.config.js",
+    "build:workbox": "webpack --config examples/workbox/webpack.config.js"
   },
   "author": "xiaop",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "style-loader": "^0.21.0",
     "sw-precache-webpack-plugin": "^0.11.5",
     "url-loader": "^1.0.1",
-    "webpack": "^3.12.0"
+    "webpack": "^3.12.0",
+    "workbox-webpack-plugin": "^3.3.1"
   }
 }
