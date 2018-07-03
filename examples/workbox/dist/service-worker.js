@@ -14,7 +14,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
 workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,
-    workbox.strategies.CacheFirst({
+    workbox.strategies.cacheFirst({
         cacheName: 'my-image-cache',
     })
 );
